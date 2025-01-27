@@ -1,0 +1,17 @@
+body{
+  background: url("../assets/home/background-home-desktop.jpg") no-repeat fixed center;
+  background-size: cover;
+  color:white;
+}
+header{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.line{
+  height:1px;
+  background-color: hsla(0, 0%, 59%, 0.25);
+}
+nav{
+  
+}
