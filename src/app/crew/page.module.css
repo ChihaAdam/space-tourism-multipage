@@ -1,0 +1,87 @@
+.container{
+    max-width: 1110px;
+    margin: auto;
+}
+.header{
+    display: flex;
+    gap:24px;
+}
+.pageName,.index{
+    font-weight: normal;
+    font-family: BarlowCondensed;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+.index{
+    letter-spacing: 4.72px;
+    opacity: 0.25;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    gap:24px;
+    flex-direction: row-reverse;
+}
+.main > *{
+    flex:1;
+    margin:0px;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    align-items: center;
+}
+.article > *{
+    margin:0px;
+}
+.job{
+    font-family: Bellefair;
+    font-weight: normal;
+    font-size: 32px;
+    opacity: 0.54;
+}
+.name{
+    font-family: BelleFair;
+    font-weight:normal;
+    font-size: 56px;
+}
+.mainInfo{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.mainInfo > *{
+    margin: 0px;
+}
+.description {
+    font-family: Barlow;
+    font-size: 18px;
+    line-height: 180%;
+    color:#D0D6F9;
+}
+.circle{
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: rgb(76, 76, 76);
+}
+.buttons{
+    display:flex;
+    gap:40px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.left > .buttons{
+    flex:0;
+}
+.left > .article{
+    flex:1;
+}
+.image{
+    mask-image: linear-gradient(to top, transparent 10%, rgb(255, 255, 255) 40%);
+    filter:saturate(0.7);
+    width:539px;
+}

@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family:"BarlowCondensed-Bold";
-  src: url("../../public/fonts/BarlowCondensed-regular.ttf");
+  src: url("../../public/fonts/BarlowCondensed-Bold.ttf");
 }
 @font-face {
   font-family:"BarlowCondensed";
@@ -24,6 +24,7 @@ body{
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
+  background-color: #000;
 }
 body > *{
   flex:1;

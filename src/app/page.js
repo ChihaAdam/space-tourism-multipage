@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 export default function Home() {
   return (
     <main className={styles.page}>
@@ -10,9 +11,11 @@ export default function Home() {
           <p className={styles.paragraph}>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
         </div>
         <div className={styles.right}>
-          <div className={styles.circle}>
-            <h3>explore</h3>
-          </div>
+          <Link href="/destination" className={styles.link}>
+            <div className={styles.circle}>
+              <h3>explore</h3>
+            </div>
+          </Link>
         </div>
         </section>
       </section>
