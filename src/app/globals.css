@@ -1,34 +1,55 @@
 @font-face{
   font-family: "Bellefair";
-  src: url("../assets/fonts/Bellefair-Regular.ttf");
+  src: url("../../public/fonts/Bellefair-Regular.ttf");
 }
 @font-face {
   font-family:"BarlowCondensed-Bold";
-  src: url("../assets/fonts/BarlowCondensed-regular.ttf");
+  src: url("../../public/fonts/BarlowCondensed-regular.ttf");
 }
 @font-face {
   font-family:"BarlowCondensed";
-  src: url("../assets/fonts/BarlowCondensed-Regular.ttf");
+  src: url("../../public/fonts/BarlowCondensed-Regular.ttf");
 }
 @font-face {
   font-family:"Barlow";
-  src: url("../assets/fonts/Barlow-Regular.ttf");
+  src: url("../../public/fonts/Barlow-Regular.ttf");
 }
 body{
-  background: url("../assets/home/background-home-desktop.jpg") no-repeat fixed center;
+  background:no-repeat fixed center;
   background-size: cover;
   color:white;
   overflow:auto;
   margin: 0px;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
-
+body > *{
+  flex:1;
+}
+.container{
+  margin:48px 0px;
+}
+.home{
+  background-image: url("../../public/home/background-home-desktop.jpg");
+}
+.destination{
+  background-image: url("../../public/destination/background-destination-desktop.jpg");
+}
+.crew{
+  background-image: url("../../public/crew/background-crew-desktop.jpg");
+}
+.technology{
+  background-image: url("../../public/technology/background-technology-desktop.jpg");
+}
 header{
   margin-top:calc(( 40 / 1024 ) * 100vh );
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
+  flex:none;
 }
 .line{
   height:1px;
@@ -44,8 +65,8 @@ header{
   margin-left: 64px;
 }
 nav{
-  backdrop-filter: blur(7px);
-  background-color: rgba(107, 107, 107, 0.137);
+  backdrop-filter: blur(calc((80/25)*2));
+  background-color: rgba(255, 255, 255, 0.05);
   padding:0px 64px 0px 96px;
   transform: translateX(-32px);
   font-size:16px;
@@ -73,5 +94,8 @@ nav{
   text-decoration: none;
 }
 .Link:hover{
+  border-bottom: 3px solid white;
+}
+.selected{
   border-bottom: 3px solid white;
 }

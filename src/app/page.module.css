@@ -54,17 +54,20 @@
     justify-content: center;
     align-items: center;
     padding:0px;
-    margin-left:268px;
 }
 .circle > h3{
     font-weight: normal;
 }
 .right{
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    padding-left:calc(540px - 272px);
 }
 .end{
     display: flex;
     flex-direction: row;
     gap:20px;
+}
+.end > * {
+    flex-grow: 1;
 }
