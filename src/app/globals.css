@@ -1,17 +1,77 @@
+@font-face{
+  font-family: "Bellefair";
+  src: url("../assets/fonts/Bellefair-Regular.ttf");
+}
+@font-face {
+  font-family:"BarlowCondensed-Bold";
+  src: url("../assets/fonts/BarlowCondensed-regular.ttf");
+}
+@font-face {
+  font-family:"BarlowCondensed";
+  src: url("../assets/fonts/BarlowCondensed-Regular.ttf");
+}
+@font-face {
+  font-family:"Barlow";
+  src: url("../assets/fonts/Barlow-Regular.ttf");
+}
 body{
   background: url("../assets/home/background-home-desktop.jpg") no-repeat fixed center;
   background-size: cover;
   color:white;
+  overflow:auto;
+  margin: 0px;
+  overflow-x: hidden;
 }
+
 header{
-  margin-top: 40px;
+  margin-top:calc(( 40 / 1024 ) * 100vh );
   display: flex;
   flex-direction: row;
+  align-items: center;
+  width: 100%;
 }
 .line{
   height:1px;
   background-color: hsla(0, 0%, 59%, 0.25);
+  width:calc((560/1440)*100vw);
+  z-index: 1;
+  margin: 0px;
+}
+.lineContainer{
+  display: flex;
+  gap:64px;
+  align-items: center;
+  margin-left: 64px;
 }
 nav{
-  
+  backdrop-filter: blur(7px);
+  background-color: rgba(107, 107, 107, 0.137);
+  padding:0px 64px 0px 96px;
+  transform: translateX(-32px);
+  font-size:16px;
+  line-height:19.2%;
+  display: flex;
+  gap:48px;
+}
+.index{
+  font-family: "BarlowCondensed-Bold";
+  letter-spacing: 2.7px;
+  font-weight: bold;
+}
+.Link{
+  cursor: pointer;
+  display:flex;
+  gap:12px;
+  font-family: Bellefair;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  padding:0px;
+  height: 96px;
+  align-items: center;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+}
+.Link:hover{
+  border-bottom: 3px solid white;
 }
