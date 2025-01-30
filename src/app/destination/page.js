@@ -12,7 +12,7 @@ export default function Page() {
       image: "/destination/image-moon.png",
       description: "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
       distance: "384,400 KM",
-      travelTime: "3 days"
+      travelTime: "3 DAYS"
     },
     {
       name: "MARS",
@@ -60,10 +60,10 @@ export default function Page() {
         <section className={styles.right}>
           <section className={`${styles.article}`}>
             <ul className={styles.moons}>
-              <li className={selected === 0 && styles.selected} onClick={() => handleSelection(0)}>MOON</li>
-              <li className={selected === 1 && styles.selected} onClick={() => handleSelection(1)}>MARS</li>
-              <li className={selected === 2 && styles.selected} onClick={() => handleSelection(2)}>EUROPA</li>
-              <li className={selected === 3 && styles.selected} onClick={() => handleSelection(3)}>TITAN</li>
+              <li className={selected === 0 ? styles.selected:""} onClick={() => handleSelection(0)}>MOON</li>
+              <li className={selected === 1 ? styles.selected:""} onClick={() => handleSelection(1)}>MARS</li>
+              <li className={selected === 2 ? styles.selected:""} onClick={() => handleSelection(2)}>EUROPA</li>
+              <li className={selected === 3 ? styles.selected:""} onClick={() => handleSelection(3)}>TITAN</li>
             </ul>
             <div className={`${styles.mainInfo} ${fade}`}>
               <h1 className={styles.name}>{moons[selected].name}</h1>
