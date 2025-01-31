@@ -67,7 +67,7 @@ header{
   margin-left: 64px;
 }
 nav{
-  backdrop-filter: blur(calc((80/25)*2));
+  backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.05);
   padding:0px 64px 0px 96px;
   transform: translateX(-32px);
