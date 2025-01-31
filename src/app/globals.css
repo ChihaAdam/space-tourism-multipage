@@ -23,7 +23,7 @@ body{
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: #000;
 }
 body > *{
@@ -31,6 +31,7 @@ body > *{
 }
 .container{
   margin:48px 0px;
+  opacity:0;
 }
 .home{
   background-image: url("../../public/home/background-home-desktop.jpg");
@@ -99,4 +100,38 @@ nav{
 }
 .selected{
   border-bottom: 3px solid white;
+}
+@media screen and (max-width:800px){
+  body{
+    overflow-x:auto;
+  }
+  .line{
+    display: none;
+  }
+  .lineContainer{
+    margin:0px;
+    margin-left: 40px;
+    padding:0px 72px 0px 0px;
+    flex:0;
+  }
+  nav{
+    padding:0px 0px 0px 32px;
+    flex:1;
+  }
+  header{
+    gap:32px;
+    margin-top: 0px;
+  }
+  .home{
+    background-image: url("../../public/home/background-home-tablet.jpg");
+  }
+  .destination{
+    background-image: url("../../public/destination/background-destination-tablet.jpg");
+  }
+  .crew{
+    background-image: url("../../public/crew/background-crew-tablet.jpg");
+  }
+  .technology{
+    background-image: url("../../public/technology/background-technology-tablet.jpg");
+  }
 }

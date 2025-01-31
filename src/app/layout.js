@@ -8,17 +8,16 @@ import { usePathname } from 'next/navigation';
 export default function RootLayout({ children }) {
   const router=usePathname(); 
   const [choice,setChoice]=useState(choose(router));
-  const [displayChildren,setDisplayChildren]=useState(children)
-  const [fade,setFade]=useState('fade-in');
+  const [fade,setFade]=useState('');
+  const [opened,isOpened]=useState(false);
   function choose(route){
     if (route =="/") return "home";
     return route.slice(1,route.length);
   }
   useLayoutEffect(()=>{
-    setFade("fade-out");
+    setFade("");
     setChoice(choose(router));
     const timeout = setTimeout(()=>{
-      setDisplayChildren(children);
       setFade("fade-in")
     },300);
     return () => clearTimeout(timeout);
@@ -34,18 +33,18 @@ export default function RootLayout({ children }) {
       <body className={choice}>
         <header>
         <div className="lineContainer">
-        <img src="/shared/logo.svg"></img>
-        <div className="line"></div>
+          <img className="logo" src="/shared/logo.svg"></img>
+          <div className="line"></div>
         </div>
-        <nav>
+        <nav  className={opened? "opened":"hide"}>
               <Link className={`Link ${choice=="home" ? "selected":""}`} href="/"><p className="index">01</p> <p>HOME</p></Link>
               <Link className={`Link ${choice=="destination" ? "selected":""}`} href="/destination"><p className="index">02</p> <p>DESTINATION</p></Link>
               <Link className={`Link ${choice=="crew" ? "selected":""}`} href="/crew"><p className="index">03</p> <p>CREW</p></Link>
-              <Link className={`Link ${choice=="technology" ? "selected":""}`} href="#"><p className="index">04</p> <p>TECHNOLOGY</p></Link>
-        </nav>
+              <Link className={`Link ${choice=="technology" ? "selected":""}`} href="/technology"><p className="index">04</p> <p>TECHNOLOGY</p></Link>     
+            </nav>
         </header>
         <main className={`container ${fade}`}>
-          {displayChildren}
+          {children}
         </main>
       </body>
     </html>

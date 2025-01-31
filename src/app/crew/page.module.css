@@ -18,19 +18,22 @@
 }
 .main{
     display: flex;
-    flex-direction: row;
     gap:24px;
     flex-direction: row-reverse;
+}
+.main > *{
+    flex:1;
+    max-width:539px;
+    margin:0px;
 }
 .main > *{
     flex:1;
     margin:0px;
 }
 .article{
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    align-content: center;
     gap:24px;
-    align-items: center;
 }
 .article > *{
     margin:0px;
@@ -59,12 +62,14 @@
     font-size: 18px;
     line-height: 180%;
     color:#D0D6F9;
+    letter-spacing: 0px;
 }
 .circle{
     width:15px;
     height:15px;
     border-radius: 50%;
     background-color: rgb(76, 76, 76);
+    transition: all 0.3s ease-in-out;
 }
 .buttons{
     display:flex;
@@ -80,8 +85,46 @@
 .left > .article{
     flex:1;
 }
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .image{
     mask-image: linear-gradient(to top, transparent 10%, rgb(255, 255, 255) 40%);
-    filter:saturate(0.7);
-    width:539px;
+    filter:saturate(0.9);
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:contain;
+}
+.imageContainer{
+    max-width:539px;
+    max-height:676px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.selected{
+    background-color: white;
+}
+@media screen and (max-width:800px) {
+    .container{
+        margin: 40px;
+    }
+    .main{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .main > *{
+        margin: auto;
+    }
+    .mainInfo{
+        align-items: center;
+    }
+    .buttons{
+        justify-content: center;
+        margin-top:24px;
+    }
 }

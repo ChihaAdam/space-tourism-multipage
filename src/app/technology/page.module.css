@@ -1,0 +1,122 @@
+.class,.index{
+    font-family: BarlowCondensed;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+.index{
+    opacity:0.25;
+    letter-spacing:4.72px;
+}
+.header{
+    display: flex;
+    gap:24px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    flex:0;
+}
+.button{
+    width: 80px;
+    height:80px;
+    background-color: hsl(0, 0%, 100%,0.25);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Bellefair;
+    font-size: 32px;
+    transition:all 0.3s ease-in-out;
+}
+.button:hover{
+    color:black;
+    background-color: hsl(0, 0%, 100%);
+}
+.selected{
+    color:black;
+    background-color: hsl(0, 0%, 100%);
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+    max-width:1275px;
+    margin:0px 0px 0px auto;
+}
+.container > *{
+    flex:1;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    gap:32px;
+}
+.left{
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+.label{
+    font-family: Bellefair;
+    font-size: 32px;
+    color:hsla(0, 0%, 100%, 0.504);
+}
+.name{
+    font-family: Bellefair;
+    font-size:56px;
+}
+.description{
+    font-family: Barlow;
+    font-size:18px;
+    line-height: 180%;
+    color:#D0D6F9;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    flex:1;
+    margin: 0px;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.head > * {
+    margin:0px;
+}
+.article > * {
+    margin:0px ;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+.image{
+    width:608px;
+}
+@media screen and (max-width:800px) {
+    .main{
+        flex-direction: column-reverse;
+    }
+    .buttons{
+        flex-direction: row;
+    }
+    .left{
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+    }
+    .article{
+        text-align: center;
+        align-items: center;
+        max-width: 70%;
+    }
+    .header{
+        margin-left: 40px;
+    }
+
+}
