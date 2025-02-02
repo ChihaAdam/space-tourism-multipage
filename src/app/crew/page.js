@@ -5,23 +5,28 @@ import '../global.css'
 import crew from './crew.json'
 import { useState , useLayoutEffect,useCallback} from 'react'
 const Page = () => {
-    const [member,setMember]=useState(3);
+    const [member,setMember]=useState(0);
     const [fade,setFade]=useState("");
     const swipeWithKeys=useCallback((event)=>{
         (event);
         if (event.key === "ArrowRight") {
             setFade("fade-out");
+            setTimeout(() => {
+                setMember((m) => (m === 3 ? 0 : m + 1));
+            }, 300);
             setTimeout(()=>{
                 setFade("");
-                setMember((m) => (m === 3 ? 0 : m + 1));
-            },300);
+                
+            },310);
         } 
         else if (event.key === "ArrowLeft") {
             setFade("fade-out");
+            setTimeout(() => {
+                setMember((m) => (m === 0 ? 3 : m - 1));
+            }, 300);
             setTimeout(()=>{
                 setFade("");
-                setMember((m) => (m === 0 ? 3 : m - 1));
-              },300);
+            },310);
         }
         })
     useLayoutEffect(() => {
